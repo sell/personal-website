@@ -14,6 +14,12 @@ body {
   overflow-x: hidden;
 }
 
+.main {
+  opacity: 0;
+  display: none;
+  transition: opacity 2s ease-in !important;
+}
+
 .sidebar__header {
   padding: 20px 20px 20px 19%;
   color: #ffffff;
@@ -204,4 +210,52 @@ body {
 }
 .opacity-1 {
   display: block;
+}
+
+.loader {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #212529;
+  background-repeat: no-repeat;
+  transition: opacity 4s ease-in-out;
+  opacity: 1;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 9999 !important;
+  img {
+    display: block;
+  }
+
+  .loading {
+    color: #f3f3f3;
+  }
+
+  #loading {
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: bottom;
+    -webkit-animation: ellipsis 2s infinite;
+    -moz-animation: ellipsis 2s infinite;
+  }
+
+  @-webkit-keyframes ellipsis {
+    from {
+      width: 2px;
+    }
+    to {
+      width: 12px;
+    }
+  }
+  @-moz-keyframes ellipsis {
+    from {
+      width: 2px;
+    }
+    to {
+      width: 12px;
+    }
+  }
+
 }

@@ -16,12 +16,17 @@ viewMore.forEach(i => i.addEventListener('click', (e) => {
     }
 }))
 
-// let state = 'none'
-// text.style.display = state;
-//
-//
-// button.addEventListener('click', () => {
-//     if(state==='none') state = 'initial';
-//     else state = 'none'
-//     text.style.display = state;
-// })
+const loader = document.querySelector('.loader');
+const main = document.querySelector('.main');
+
+const preLoader = () => {
+    setTimeout(() => {
+        loader.classList.opacity = 0;
+        loader.style.display = 'none';
+
+        main.style.display = 'block';
+        setTimeout(() => main.style.opacity = 1, 50)
+    }, 4000)
+}
+
+preLoader();
