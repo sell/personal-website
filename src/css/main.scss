@@ -68,23 +68,54 @@ body {
   }
 
   .mainContent {
-    margin-left: 300px; /* Same as the width of the sidenav */
+    margin-left: 300px;
     padding: 0 10px;
+
+    width: calc(100% - 300px);
+    .projects__grid {
+      justify-items: center;
+      .__projects {
+        max-width: 300px;
+        min-width: 300px;
+      }
+    }
+    @media only screen and (max-width: 1820px) {
+
+      .projects__grid {
+        align-items: center;
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media only screen and (max-width: 1420px) {
+
+      .projects__grid {
+        align-items: center;
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media only screen and (max-width: 1030px) {
+
+      .projects__grid {
+        align-items: center;
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+
     @media only screen and (max-width: 500px) {
       position: relative !important;
-      display: flex;
-      justify-content: center;
       align-items: center;
       flex-direction: column;
-      max-width: 100vw;
-      margin-left: 15px;
+      width: 100%;
+      margin: 0;
       padding: 0 !important;
       .spotify__github {
         flex-direction: column;
-        margin: 6rem 0;
+        margin: 8rem 0;
 
         .spotify {
-          margin-bottom: 2rem;
+          margin: 4rem 0;
         }
 
       }
@@ -98,8 +129,10 @@ body {
 
   .image__logo {
     position: absolute;
-    margin-left: 150px;
-    display: none;
+    margin: 0 0 0 160px;
+    top: 20px;
+    height: 70px;
+    //display: none;
   }
 }
 
