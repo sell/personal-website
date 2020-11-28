@@ -1,4 +1,10 @@
 [[redirects]]
-    from = "/*"
+    from = "/pages/ritter"
+    to = "/pages/ritter/maintenance.html"
+    status = 200
+
+    from = "/pages"
     to = "/"
     status = 200
+
+
