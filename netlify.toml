@@ -1,6 +1,7 @@
 [[redirects]]
-    from = "/pages/ritter"
-    to = "/pages/ritter/maintenance.html"
+    from = "/*"
+    to = "/"
     status = 200
+
 
 
