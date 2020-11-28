@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel src/index.pug --no-cache",
+    "dev": "parcel src/index.pug src/pages/**/*.pug --no-cache",
     "build": "parcel build src/index.pug"
   },
   "keywords": [],
