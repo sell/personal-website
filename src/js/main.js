@@ -20,6 +20,7 @@ const loader = document.querySelector('.loader');
 const main = document.querySelector('.main');
 
 const preLoader = () => {
+    localStorage.setItem('loader', 'true')
     setTimeout(() => {
         loader.classList.opacity = 0;
         loader.style.display = 'none';
@@ -29,4 +30,13 @@ const preLoader = () => {
     }, 4000)
 }
 
-preLoader();
+const loaderDisabled = localStorage.getItem('loader');
+
+if (loaderDisabled !== 'true') {
+    preLoader();
+} else {
+    loader.classList.opacity = 0;
+    loader.style.display = 'none';
+    main.style.display = 'block';
+    main.style.opacity = '1'
+}
